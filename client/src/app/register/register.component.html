@@ -1,0 +1,70 @@
+<div class="app flex-row align-items-center back">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card mx-4">
+          <div class="card-body p-4">
+
+            <h2>{{Config.signup.firstname}}</h2>
+          <!--   <p class="text-muted">{{Config.signup.create}}</p> -->
+            <form role="form" (ngSubmit)="onSubmit()" #loginForm="ngForm">
+              <!-- name field -->
+            <div class="input-group mb-3">
+              <span class="input-group-addon"><i class="icon-user"></i></span>
+             <input type="text" placeholder="Name" class="form-control" id="name"
+            required pattern="[a-zA-Z][a-zA-Z ]+" [(ngModel)]="data.name" name="name" #name="ngModel">
+              </div>
+            <div [hidden]="name.valid || name.pristine"
+            class="message">
+            <div [hidden]="!name.hasError('required')">{{Config.signup.errorname}}</div>
+            <div [hidden]="!name.hasError('pattern')">{{Config.signup.erroralphabet}}</div>     
+          </div>
+       
+             <!-- email field -->
+            <div class="input-group mb-3">
+              <span class="input-group-addon">@</span>
+             <input type="text" placeholder="Email Address" class="form-control" id="emailaddress"
+            required [(ngModel)]="data.email" name="email"pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" #email="ngModel">
+             </div>
+      <div [hidden]="email.valid || email.pristine" class="message">
+        <div [hidden]="!email.hasError('required')">{{Config.signup.emailrequire}}</div>
+        <div [hidden]="!email.hasError('pattern')">{{Config.signup.emailformat}} <small><b>{{Config.signup.emailex}}</b></small></div>
+      </div>
+           
+             <!-- password field -->
+            <div class="input-group mb-3">
+              <span class="input-group-addon"><i class="icon-lock"></i></span>
+              <input type="password" placeholder="Password" class="form-control" id="password"
+      required [(ngModel)]="data.password" name="password"
+      pattern="^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$"
+      #password="ngModel">  </div>
+      <div [hidden]="password.valid || password.pristine" class="message">
+        <div [hidden]="!password.hasError('minlength')">{{Config.signup.passwordcharacter}}</div> 
+        <div [hidden]="!password.hasError('required')"> {{Config.signup.passwordrequire}}</div>
+        <div [hidden]="!password.hasError('pattern')"> {{Config.signup.passwordcase}}</div>
+      </div>
+          
+              <!-- confirm password field -->
+
+            <div class="input-group mb-4">
+              <span class="input-group-addon"><i class="icon-lock"></i></span>
+              <input type="password" placeholder=" Confirm Password" class="form-control" id="confirmPassword" required [(ngModel)]="data.confirmPassword" name="confirmPassword"
+      #confirmPassword="ngModel">
+            </div>
+
+            <button type="button" class="btn btn-block btn-primary" id="login-button" [disabled]="!loginForm.form.valid" (click)="postUser()">{{Config.signup.createAccount}}</button>
+          
+          <!-- alert for showing errors -->
+    <div *ngIf="flag==1" class="alert alert-info" role="alert">
+     {{Config.signup.emailverify}}
+   </div>
+   <!-- redirection to login page -->
+   <p id="links" class="accountButton">{{Config.signup.haveAcc}} <a [routerLink]="['']">{{Config.signup.login}}</a></p>
+          </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

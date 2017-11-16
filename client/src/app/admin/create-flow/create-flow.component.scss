@@ -1,0 +1,144 @@
+.btn
+{
+    color: white;
+    background-color: #375372;
+}
+.text-a{
+    margin-top: 5%;
+}
+.card-wrapper {
+  margin: 0 auto;
+  padding-left: 5em;
+  padding-top: 5em;
+  background-color: #fff;
+  height: 100%;
+}
+.card {
+  width: 20em;
+  margin-top: 0px;
+  margin-bottom: 30px; 
+  background-color: #fff;
+  display: block;
+  overflow-y: hidden;
+  color: #212121;
+  text-overflow: ellipsis;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-top: 1px solid #eeeeee;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom: 2px solid #e0e0e0;
+    /*-webkit-box-shadow: 0px 5px 0px 0px rgba(102,102,102,0.4);
+  -moz-box-shadow: 0px 5px 0px 0px rgba(102,102,102,0.4);
+  box-shadow: 0px 5px 0px 0px rgba(102,102,102,0.4);*/
+  box-shadow: 2px 2px 2px 1.7px rgba(17, 25, 35, 0.3);
+}
+.card .controls {
+  content: "";
+  display: block;
+  height: 2.5em;
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid #eee;
+}
+.card .controls li {
+  position: relative;
+  
+  z-index: 1;
+  color: #424242;
+  font-size: 1.4em;
+  height: 100%;
+  display: inline-block;
+  float: left;
+  width: 33.33333%;
+  text-align: center;
+}
+.card .controls li:hover {
+  cursor: pointer;
+  color: #fff;
+  transition: color .175s;
+}
+.card .controls .read:after {
+  position: absolute;
+  content: " ";
+  z-index: -2;
+  display: block;
+  background: #0090FF;
+  height: 120%;
+  width: 100%;
+  margin-top: 0;
+  transition: transform .175s;
+}
+.card .controls .views:after {
+  position: absolute;
+  content: " ";
+  z-index: -2;
+  display: block;
+  background:#5CB85C;
+  height: 120%;
+  width: 100%;
+  margin-top: 0;
+  transition: transform .175s;
+}
+.card .controls .comment:after {
+  position: absolute;
+  content: " ";
+  z-index: -2;
+  display: block;
+  background: #D9534F;
+  height: 120%;
+  width: 100%;
+  margin-top: 0;
+  transition: transform .175s;
+}
+.card .controls li:hover::after {
+  transform: translateY(-80%);
+  transition: transform .175s;
+  margin-top: 0;
+}
+.card .controls li p {
+  padding-top: 0px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.card .controls li p .text-a {
+  padding-top: 15px;
+}
+.card h3 {
+  
+  
+  font-weight: normal;
+  padding-top: 0;
+  margin-top: 0.3em;
+  margin-left: 0.5em;
+  margin-bottom: 0;
+  color: #375372;
+}
+.card .desc-text {
+  
+  color: #212121;
+  
+  padding-top: 0.4em;
+  padding-left: 1.75em;
+  padding-right: 1.75em;
+  padding-bottom: 0.6em;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow: hidden;
+  max-height: 10.5em;
+  line-height: 1.5;
+}
+.form-control{
+  font-size: 18px;
+      height: 40px;
+}
+.btn{
+  font-size: 18px;
+}
+h3{
+  font-size: 25px;
+}

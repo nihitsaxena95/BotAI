@@ -1,0 +1,19 @@
+<!-- start of header component -->
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <a class="navbar-brand links" [routerLink]="['/user/dashboardUser']" >{{Config.html.heading}}</a>
+     <ul class="nav navbar-nav ml-auto">
+        <li class="nav-item dropdown" dropdown="" placement="bottom right" ng-reflect-placement="bottom right">
+      <!-- name of user -->  
+      <a aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" dropdowntoggle="" href="#" role="button" aria-expanded="false">
+        <avatar [name]="initialCharacter" [size]=40 [displayType]="'circle'"></avatar>
+      </a>
+        <!-- links for user -->
+        <div aria-labelledby="simple-dropdown" class="dropdown-menu dropdown-menu-right">
+        <a class="dropdown-item" [routerLink]="['/user/chat']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><i class="fa fa-comments"></i>{{Config.html.chat}}</a>
+        <a class="dropdown-item" [routerLink]="['/user/editprofile']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><i class="fa fa-user"></i> {{Config.html.edit}}</a>
+        <a class="dropdown-item log" (click)="logout()"><i class="fa fa-sign-out"></i> {{Config.html.logout}}</a>
+      </div>
+    </li>
+</ul>     
+</nav>
+<!-- end of header component -->

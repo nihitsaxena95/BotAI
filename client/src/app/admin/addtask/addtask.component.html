@@ -1,0 +1,43 @@
+<!-- start of container -->
+<div class="" id="top">
+  <!-- start of form -->
+  <form role="form">
+   <div class="row justify-content-center main">
+    <div class="col-md-10 form">
+      <!-- start textfields of the form -->
+      {{Config.addtask.TaskName}}  <input class="form-control border no-shadow no-rounded" name="name" [(ngModel)]="task.name" placeholder="Type your message here"><br>
+
+      {{Config.addtask.Question}}  <input class="form-control border no-shadow no-rounded" name="ques" [(ngModel)]="task.question" placeholder="Type your message here"><br>
+
+      {{Config.addtask.AnswerType}}
+      <div class="form-group">
+        <select class="form-control" id="sel1">
+         <option>{{item1}}</option>
+         <option>{{item2}}</option>
+         <option>{{item3}}</option>
+       </select>
+     </div>
+
+     {{Config.addtask.Answer}}  <input class="form-control border no-shadow no-rounded" name="answer" [(ngModel)]="task.answer" placeholder="Type your message here"><br>
+
+     {{Config.addtask.AnswerNextStep}} <input class="form-control border no-shadow no-rounded" name="nextans" [(ngModel)]="task.nextstep" placeholder="Type your message here"><br>
+
+     {{Config.addtask.AnswerResponse}} <input class="form-control border no-shadow no-rounded" name="res" [(ngModel)]="task.response" placeholder="Type your message here"><br>
+
+     {{Config.addtask.NegativeAnswer}}  <input class="form-control border no-shadow no-rounded" name="negative" [(ngModel)]="task.nanswer" placeholder="Type your message here"><br>
+
+     {{Config.addtask.NegativeNextStep}} <input class="form-control border no-shadow no-rounded" name="nextneg" [(ngModel)]="task.negativenextstep" placeholder="Type your message here"><br>
+
+     {{Config.addtask.NegativeResponse}}<input class="form-control border no-shadow no-rounded" name="negres" [(ngModel)]="task.negativeResponse" placeholder="Type your message here"><br>
+     <!-- button for add Question -->
+     <button class="btn btn-primary" (click) = AddQuestion()>{{Config.addtask.AddQuestion}}</button>
+
+     <!-- button for Submit -->
+     <button class="btn btn-primary" id="sub" (click) = Submit()>{{Config.addtask.Submit}}</button>
+     <!-- end of input fields -->
+   </div>
+ </div>
+</form>
+<!-- end of form -->
+</div>
+<!-- end of container -->

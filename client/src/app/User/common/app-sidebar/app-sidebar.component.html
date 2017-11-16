@@ -1,0 +1,36 @@
+
+  <!-- navbar  -->
+<nav class="sidebar" [ngClass]="{sidebarPushRight: isActive}">
+  <!-- unordered list -->
+  <ul class="list-group">
+  <!-- Link to Dashboard -->
+    <a [routerLink]="['/user/dashboardUser']"  [routerLinkActive]="['router-link-active']" class="list-group-item">
+      <i class="fa fa-fw fa-dashboard" id="dash"></i>&nbsp;{{ 'Dashboard' }}
+    </a>
+    <a [routerLink]="['/user/chat']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+      <i class="fa fa-comments" id="portfolio"></i>&nbsp;{{ 'Chat' }}
+    </a>
+    <a [routerLink]="['/user/feedback']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+    <!-- Link to Feedback -->
+      <i class="fa fa-envelope-open" id="feedback"></i>&nbsp;{{ 'Feedback'}}
+    </a>
+
+    <a [routerLink]="['/user/mypolicy']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+    <!-- Link to My policies -->
+     <i class="fa fa-question-circle" id="mypolicy"></i>&nbsp;{{ 'Help' }}
+   </a>
+
+     <a [routerLink]="['/admin/dashboardAdmin/addtask']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+    <!-- Link to My policies -->
+     <i class="fa fa-cog" id="mypolicy"></i>&nbsp;{{ 'Profile Setting' }}
+   </a>
+
+    <a [routerLinkActive]="['router-link-active']" class="list-group-item" (click) = logOut()>
+    <!-- Link to My policies -->
+     <i class="fa fa-sign-out" id="mypolicy"></i>&nbsp;{{ 'Log out' }}
+   </a>
+
+</ul>
+<!-- end of unordered list -->
+</nav>
+<!-- end of navbar -->

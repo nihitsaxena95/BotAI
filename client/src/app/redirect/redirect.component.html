@@ -1,0 +1,7 @@
+<!-- - - - Warning page if link sent on mail is expired- - - - -->
+<div class="card">
+	<div class="card-block" *ngIf="flag!=1">
+		<h4 class="card-title">{{Config.redirect.warning}}</h4>
+		<p class="card-text">{{Config.redirect.message}}</p>
+	</div>
+</div>

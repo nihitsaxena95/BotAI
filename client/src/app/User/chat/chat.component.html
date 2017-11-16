@@ -1,0 +1,108 @@
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+  <div class="row">
+
+    <!--=========================================================-->
+    <!-- selected chat -->
+
+    <!-- ===================================================== -->
+    <div class="col-md-12 fullstyle">
+    <span class="pull-right fetchHistory" (click)="fetchHistory()">{{Config.html.History}}</span>
+     <div class="chat-panel card1 card-default"> 
+      <!-- Card -->
+      <h3><strong>{{Config.html.Penny}}</strong></h3>
+      <div class="card-block scrollMe" #scrollMe >
+       <div id="scroll">
+         <ul class="chat">
+          <div class="left clearfix">
+           <div *ngFor="let ans of question;let i=index">
+             <div *ngIf="ans">
+               <div class="gap" *ngIf="ans.bot">
+                 <div class="message-data align-left">
+                  <span class="message-data-name"><i class="fa fa-circle you"></i>{{Config.html.Bot}}</span>
+
+                </div>
+                <!-- chat body -->
+                <div class="chat-body clearfix">
+                 <div class="message you-message">
+                   {{ans.bot}}
+                   <div *ngIf="ans.option">
+                     <div *ngFor="let opt of ans.option;let i=index">
+                       {{i+1}} )  {{opt.value}}
+                     </div>
+                   </div>
+                   <div *ngIf="ans.image">
+                     <img src="{{ans.image}}">
+                   </div>
+                   <!-- <small class="pull-right text-muted"><i class="fa fa-clock-o">12 mins ago</i> </small> -->
+                   <div class="example-sidenav-content">
+                  </div>
+                   </div>
+                </div>
+               </div>
+                <div *ngIf="ans.link">
+              <div *ngIf="ans.link.length > 0">
+                <i class="fa fa-info-circle" aria-hidden="true" (click)="next(ans,i)"></i>
+                <i class="fa fa-video-camera" aria-hidden="true" [id]="ans.video" appAsideMenuToggler></i>
+              </div>
+            </div>
+            <div class="resp" *ngIf="resp && index==i">
+         <div *ngFor="let response of resp">
+          <div class="card-block">
+            <a href={{response.ogp.ogUrl}} target="_blank">{{response.ogp.ogUrl}}</a>
+            <div>
+              <div class="attachment_source">
+                <img class="attachment_source_icon" src="{{response.other.appleTouchIcon}}" alt="">
+                <span class="attachment_source_name">{{response.ogp.ogSiteName}}</span>
+
+              </div>
+              <h4 class="card-title"><a href={{response.ogp.ogUrl}} target="_blank">{{response.ogp.ogTitle}}</a></h4>
+
+              <p class="card-text ogDescription">{{response.ogp.ogDescription}}</p>
+              <div>
+                <span class="attachment_ts">{{response.other.articlePublishedTime}}</span>  
+              </div>
+              <img class="image" src={{response.ogp.ogImage[0].url}}>
+
+            </div>
+          </div>
+          <hr>
+        </div>
+      </div>
+                <!-- Answers -->
+                <div *ngIf="ans.user">
+                  <div class="message-data align-right">
+                   <span class="message-data-name">{{username}}</span> <i class="fa fa-circle me"></i>
+                 </div>
+                 <div class="chat-body clearfix">
+                   <div class="message me-message float-right">
+                   {{ans.user}}
+                    <!-- <small class="pull-right text-muted"><i class="fa fa-clock-o"> 13 mins ago</i></small> -->
+                  </div>
+                </div>
+              </div>
+
+         </div>
+        
+    </div>
+  </div>
+</ul>
+</div>
+</div>
+</div>
+<!-- card footer -->
+<div class="card-footer" >
+ <div class="input-group">
+   <input id="btn-input"  type="text" name="ques" class="form-control input-lg" name="first" placeholder="Type your message here..." autofocus="" [(ngModel)]="answer" (keyup.enter)="judge(answer)">
+   <span class="input-group-btn">
+     <button class="btn btn-default btn-lg" id="btn-chat" (click) =judge(answer)>
+       {{Config.html.Send}}
+     </button>
+   </span>
+ </div>
+</div>
+</div>
+</div>
+<div class="container-fluid bootstrap snippet">
+
+</div>

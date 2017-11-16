@@ -1,0 +1,77 @@
+<div *ngIf = "nodeCount != undefined">
+<div class="row">
+    <!-- Intent -->
+<div class="col-md-3">           
+  <div class="widget widget-default widget-item-icon">
+    <div class="widget-item-left">
+      <i class="fa fa-tags fa-2x" aria-hidden="true"></i>
+    </div>
+    <div class="widget-data">
+      <div class="widget-int num-count ng-binding mostViewed" >{{nodeCount[3].Intent}}</div>
+      <div class="widget-title">{{Config.dashboard.Intent}}</div>
+      <div class="widget-subtitle">
+        <a class="userdata" [routerLink]="['/admin/trainingbot']">{{Config.dashboard.addintent}}</a></div>
+      </div>
+    </div>  
+  </div>
+ <!-- Domain -->
+ <div class="col-md-3">    
+  <div class="widget widget-default widget-item-icon">
+    <div class="widget-item-left">
+    <i class="fa fa-university fa-2x" aria-hidden="true"></i>
+    </div> 
+    <div class="widget-data">
+      <div class="widget-int num-count ng-binding" >{{nodeCount[0].Domain}}</div>
+      <div class="widget-title">{{Config.dashboard.Domain}}</div>
+      <div class="widget-subtitle"><a class="userdata" [routerLink]="['/admin/trainingbot']" >{{Config.dashboard.AddDomain}}
+      </a></div>
+    </div>           
+  </div>
+</div>
+<!-- Sub Domain -->
+<div class="col-md-3">          
+  <div class="widget widget-default widget-item-icon">
+    <div class="widget-item-left">
+      <span class="fa fa-sitemap fa-2x"></span>
+    </div>
+    <div class="widget-data">
+      <div class="widget-int num-count ng-binding" >{{nodeCount[1].SubDomain}}</div>
+      <div class="widget-title">{{Config.dashboard.SubDomain}}</div>
+      <div class="widget-subtitle"><a class="userdata" [routerLink]="['/admin/trainingbot']">{{Config.dashboard.AddSubDomain}}</a></div>
+    </div>
+  </div>  
+</div>
+<!-- Entity -->
+<div class="col-md-3">           
+  <div class="widget widget-default widget-item-icon">
+    <div class="widget-item-left">
+      <i class="fa fa-gift fa-2x" aria-hidden="true"></i>
+    </div>
+    <div class="widget-data">
+      <div class="widget-int num-count ng-binding mostViewed" >{{nodeCount[2].Entity}}</div>
+      <div class="widget-title">{{Config.dashboard.Entity}}</div>
+      <div class="widget-subtitle">
+        <a class="userdata" [routerLink]="['/admin/trainingbot']">{{Config.dashboard.AddEntity}}</a></div>
+      </div>
+    </div>  
+  </div>
+ 
+
+  </div>
+  <div class="row" *ngIf = "unAnsCount != undefined">
+    <!-- Unanswered questions -->
+<div class="col-md-3">           
+  <div class="widget widget-default widget-item-icon">
+    <div class="widget-item-left">
+      <i class="fa fa-question-circle fa-2x" aria-hidden="true"></i>
+    </div>
+    <div class="widget-data">
+      <div class="widget-int num-count ng-binding mostViewed" >{{unAnsCount.unansCount}}</div>
+      <div class="widget-title">{{Config.dashboard.UnansQueCount}}</div>
+      <div class="widget-subtitle">
+        <a class="userdata" [routerLink]="['/admin/trainingbot']">{{Config.dashboard.AddQuestion}}</a></div>
+      </div>
+    </div>  
+  </div>
+  </div>
+</div>

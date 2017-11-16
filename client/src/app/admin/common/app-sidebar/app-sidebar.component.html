@@ -1,0 +1,69 @@
+
+  <!-- navbar  -->
+<nav class="sidebar" [ngClass]="{sidebarPushRight: isActive}">
+  <!-- unordered list -->
+  <ul class="list-group">
+  <!-- Link to Dashboard -->
+    <a [routerLink]="['/admin/dashboardAdmin']"  [routerLinkActive]="['router-link-active']" class="list-group-item">
+      <i class="fa fa-fw fa-dashboard" id="dash"></i>&nbsp;{{ 'Dashboard' }}
+    </a>
+    <a [routerLink]="['/admin/traindomain']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+      <i class="fa fa-graduation-cap" id="traindomain"></i>&nbsp;{{ 'Train Domain' }}
+    </a>
+    <a [routerLink]="['/admin/trainingbot']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+    <!-- Link to Feedback -->
+      <i class="fa fa-newspaper-o" id="trainingbot"></i>&nbsp;{{ 'Train Bot'}}
+    </a>
+
+    <a [routerLink]="['/admin/dashboardAdmin/intentForm']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+    <!-- Link to My policies -->
+     <i class="fa fa-question-circle" id="mypolicy"></i>&nbsp;{{ 'Intent Form' }}
+   </a>
+
+      <a [routerLink]="['/admin/trainingbot/addnewcontext']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+    <!-- Link to My policies -->
+     <i class="fa fa-pencil" id="mypolicy"></i>&nbsp;{{ 'Add Context' }}
+   </a>
+
+      <a [routerLink]="['/admin/dashboardAdmin/intent']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+    <!-- Link to My policies -->
+     <i class="fa fa-paperclip" id="mypolicy"></i>&nbsp;{{ 'Intent' }}
+   </a>
+
+      <a [routerLink]="['/admin/dashboardAdmin/addtask']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+    <!-- Link to My policies -->
+     <i class="fa fa-question-circle" id="mypolicy"></i>&nbsp;{{ 'Add Task' }}
+   </a>
+
+    <a [routerLink]="['/admin/dashboardAdmin/addtask']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+    <!-- Link to My policies -->
+     <i class="fa fa-cog" id="mypolicy"></i>&nbsp;{{ 'Profile Setting' }}
+   </a>
+
+    <a [routerLinkActive]="['router-link-active']" class="list-group-item" (click) = logOut()>
+    <!-- Link to My policies -->
+     <i class="fa fa-sign-out" id="mypolicy"></i>&nbsp;{{ 'Log out' }}
+   </a>
+
+   <!-- <div class="nested-menu">
+    <a class="list-group-item" (click)="addExpandClass('pages')">
+      <span><i class="fa fa-plus"></i>&nbsp; {{ 'Account'}}</span>
+    </a>
+    <li class="nested" [class.expand]="showMenu === 'pages'">
+      <ul class="submenu">
+        <li>
+          <a href="javascript:void(0)" [routerLink]="['/user/editprofile']"><span>{{ 'Profile' }}</span></a>
+        </li>
+        <li>
+          <a href="javascript:void(0)" [routerLink]="['/user/accountsettings']" ><span>{{ 'Settings'}}</span></a>
+        </li>
+        <li>
+          <a href="javascript:void(0)" (click)="logout()"><span>{{ 'Signout' }}</span></a>
+        </li>
+      </ul>
+    </li>
+  </div> -->
+</ul>
+<!-- end of unordered list -->
+</nav>
+<!-- end of navbar -->

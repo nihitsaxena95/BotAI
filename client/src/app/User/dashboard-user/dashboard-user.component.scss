@@ -1,0 +1,57 @@
+@media (min-width: 300px) and (max-width: 1204px) {
+.d-md-down-none{
+  display: inline !important;
+}
+ }
+ @media (min-width: 300px) and (max-width: 1204px) {
+ .btn{
+      font-size: 0.820rem;
+ }
+}
+
+@media (min-width:  300px) and (max-width: 1204px) {
+.card-group .card {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 0%;
+    flex: 1 0 0%;
+    margin-bottom: 0;
+    float: right;
+}
+}
+@media screen and (max-width: 360px) {
+    .button-text {
+       font-size:7px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .card {
+       min-height:95%;
+    }
+}
+
+.card-header {
+    font-weight: 600;
+    font-size:20px;
+    background-color:#375372;
+    color:white;
+    width:100.2%;
+    padding: 1rem 1.25rem;
+}
+
+.card.pi-draggable {
+   box-shadow: 2px 2px 2px 1.7px rgba(17, 25, 35, 0.3);
+   border:0px;
+} 
+
+.row {
+    margin-top:2%;
+}
+
+.card-text {
+    margin:15px 0 10px;
+}
+a {
+    text-decoration:none;
+    color:#375372;
+}

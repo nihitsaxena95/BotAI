@@ -1,0 +1,459 @@
+.unanswed{
+  font-family: 'Harmattan', sans-serif;
+      font-size: 21px;
+}
+
+.chat
+{
+list-style: none;
+margin: 0;
+padding: 0;
+}
+.chat li
+{
+margin-bottom: 10px;
+padding-bottom: 5px;
+border-bottom: 1px dotted #B3A9A9;
+}
+.chat li.left .chat-body
+{
+margin-left: 0px;
+}
+
+.chat li.right .chat-body
+{
+margin-right: 60px;
+}
+b{
+font-size: 20px;
+}
+.chat li .chat-body p
+{
+margin: 0;
+color: #777777;
+}
+.panel .slidedown .glyphicon, .chat .glyphicon
+{
+margin-right: 5px;
+}
+.panel-body
+{
+overflow-y: scroll;
+height: 370px;   
+}
+
+.panel {
+  border: 1px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    /* border: 1px solid transparent; */
+    /* border-radius: 4px; */
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+
+collapsible-body {
+  overflow: -webkit-paged-x !important;
+}
+
+.form-control {
+  font-size: 18px;
+}
+.panel-body.tablepanel {
+overflow-y: scroll;
+height: 370px;   
+}
+::-webkit-scrollbar-track
+{
+-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+background-color: #F5F5F5;
+}
+::-webkit-scrollbar
+{
+width: 12px;
+background-color: #F5F5F5;
+}
+::-webkit-scrollbar-thumb
+{
+-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+background-color: #555;
+}
+.btn {
+line-height:0.3;
+padding: 12px 12px;
+}
+.btn.badgebtn {
+margin-right:-2%;
+}
+.btn.btn-block {
+width:50%;
+padding:6px 1px;
+
+}
+
+.main-collapsible-header {
+    background-color: #375372;
+    color: white;
+}
+
+.quetioncollapse {
+    display: block;
+    border-bottom: 1px solid #ddd;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.btn.headingbtn {
+background-color:#375372;
+}
+.headingbutton {
+margin-bottom:1%;
+}
+.btn.btn-primary {
+color:white;
+background-color: #375372;
+border-color: #375372;
+margin-top: auto;
+font-size: 17px;
+}
+.btn.btn-primary:hover {
+color:white;
+}
+.badge {
+  
+    padding-right: 10px;
+    padding-bottom: 8px;
+    padding-left: 10px;
+border-radius: 5px;
+margin-left: 1%;
+font-size:17px;
+}
+
+.cross {
+	font-size:12px;	
+}
+
+a {
+text-decoration:none;
+cursor:pointer;
+}
+.badge.badge-pill.intbadge{
+background-color:#118c8b;
+}
+.badge.badge-pill.subintbadge{
+background-color:#a3586d;
+}
+.add {
+margin-top:2%;
+font-size: inherit;
+margin-left: 1%;
+background-color:#375372;
+border-color: #375372;
+border-radius: 4px;
+}
+.searchsyn {
+margin-bottom:2%;
+margin-top:2%;
+}
+.fa.fa-circle {
+margin-right:2%;
+}
+.icon {
+font-size: large;
+color: #375372;
+}
+.fa.fa-plus-square.pi-draggable.btn-block.icon {
+font-size: large;
+color: #375372;
+}
+.int {
+color:#118c8b;
+
+}
+.c-btn[_ngcontent-c6] {
+
+    font-size: 20px;
+   
+}
+.subint {
+color:#a3586d;
+
+margin-left:6%
+}
+.card-header {
+background-color: #375372;
+color: white;
+padding: 10px 15px;
+}
+#c_button {
+font-size: inherit;
+}
+#btn-chat {
+color: #fff;
+background-color: #fa9040;
+font-size: initial;
+}
+.pure-checkbox[_ngcontent-c1] input[type="checkbox"][_ngcontent-c1]:checked + label[_ngcontent-c1]:before {
+animation: borderscale 200ms ease-in;
+background: white;
+border: 2px solid white;
+}
+.pure-checkbox[_ngcontent-c1] input[type="checkbox"][_ngcontent-c1] + label[_ngcontent-c1]:before {
+box-sizing: content-box;
+content: '';
+color: white;
+position: absolute;
+top: 50%;
+left: 0;
+width: 14px;
+height: 14px;
+margin-top: -9px;
+border: 2px solid white !important;
+text-align: center;
+transition: all 0.4s ease;
+}
+.greentick {
+font-size: 23px;
+color:#00FF00 
+}
+.badge.badge-pill {
+margin-top:1.5%;
+background-color: #375372;
+}
+span.badge.badge-pill.text-white{
+  font-size:17px;
+}
+.panel-primary>.panel-heading {
+color:black;
+background-color:#fff;
+border-color: #375372;
+}
+
+.displayQues {
+  margin-left: 2%;
+}
+
+.panel-primary {
+    border-color: #337ab7;
+    width: 110%;
+}
+
+.collapse {
+  width:100%;
+}
+
+app-context {
+  width:100%;
+}
+
+.col-md-4 {
+      position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 14px;
+     padding-left: 1px; 
+  }
+
+.btn.btn-primary.pi-draggable.btn-block {
+color: #fff;
+background-color: #375372;
+border-color: #375372;
+}
+.dropdownfirst{
+margin-bottom:2%;
+    margin-left: -2.5%;
+    font-size:20px;
+}
+.btn.btn-primary.add.deleteIntentbtn {
+margin-top:4%;
+margin-left: 9%;
+margin-bottom: 8%;
+    padding-top: 14px;
+    padding-right: 14px;
+    padding-bottom: 14px;
+    padding-left: 14px;
+
+}
+.btn-primary.add.addintentbtn {
+margin-left: 2%;
+    padding-top: 14px;
+    padding-right: 14px;
+    padding-bottom: 14px;
+    padding-left: 14px;
+
+}
+.unansweredplaceholder{
+font-size: 20px;
+}
+.addsynonyminput{
+margin-left:-3%;
+}
+
+
+span.badge.badge-pill.text-white{
+ font-size:17px;
+}
+
+.h4, h4 {
+font-size: 23px;
+margin-left: 2%;
+}
+.badge.intbadge.badge-pill.text-white{
+margin-left:2%;
+}
+.suggestsynonym {
+padding: 1px 1px;
+}
+/*
+.queDelete.fa.fa-times {
+float: right;
+}
+*/
+.btn .badge {
+font-size: 12px;
+}
+.row {
+margin-left: 3%;  
+}
+@media (min-width: 300px) and (max-width: 1204px) {
+.d-md-down-none{
+display: inline !important;
+}
+}
+@media (min-width:  300px) and (max-width: 1204px) {
+.card-group .card {
+-webkit-box-flex: 1;
+-ms-flex: 1 0 0%;
+flex: 1 0 0%;
+margin-bottom: 0;
+float: right;
+}
+}
+@media screen and (max-width: 360px) {
+.button-text {
+font-size:7px;
+}
+}
+a{
+font-size: 23px;
+margin-top : 4px;
+}
+td{
+font-size: 21px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) { 
+    .btn.btn-primary.add.deleteIntentbtn{
+        margin-left: -20px;
+        padding-left: 10%;
+    padding-right: 10%;
+    }
+
+    .btn.btn-primary.add.addSynonym {
+ margin-left: -20px;
+        padding-left: 10%;
+    padding-right: 10%;
+    }
+}
+.btn[_ngcontent-c6] .badge[_ngcontent-c6] {
+    font-size: 17px;
+}
+.secondtext{
+margin-left:-6.5%; 
+}
+
+.c-btn[_ngcontent-c6] {
+
+    font-size: 20px;
+}
+.btn[_ngcontent-c5]
+{
+      padding: 14px 12px;
+}
+.btn[_ngcontent-c5] .badge[_ngcontent-c5] {
+padding: 8px;
+background-color: #54678f ;
+}
+.input-sm {
+height: 34px;
+}
+@media (min-width: 320px) and (max-width: 736px) { 
+.btn.btn-primary.add.deleteIntentbtn[_ngcontent-c5] {
+margin-left: -3%;
+}
+.h4[_ngcontent-c5], h4[_ngcontent-c5] {
+margin-left: 4%;
+}
+h4{
+  font-size: 23px;
+}
+
+.badge.intbadge.badge-pill.text-white[_ngcontent-c5] {
+margin-left: 5%;
+}
+}
+
+@media (min-width: 320px) and (max-width: 736px) {
+
+.btn.btn-primary[_ngcontent-c5] {
+margin-top: 3%;
+} 
+.add[_ngcontent-c5] {
+   margin-left: -3%;
+}
+.btn-primary.add.addintentbtn[_ngcontent-c5] {
+   margin-left: 6%;
+   }
+
+   .secondtext[_ngcontent-c5] {
+   margin-left: -10%;
+}
+.headingcircle{
+   margin-left:-9%;
+}
+}
+div.panel-heading{
+    font-size:24px;
+}
+.modalone{
+  font-size:20px;
+}
+h5 {
+ font-size:18px;
+}
+@media (min-width: 320px) and (max-width: 640px) {
+
+.headingcircle[_ngcontent-c5] {
+   margin-left: -4%;
+}
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+.displayQues{
+   float: right;
+   margin-top: -65%;
+   margin-right: 5%;
+}
+
+@media (min-width: 1024px) and (max-width: 1366px){
+.displayQues[_ngcontent-c5][_ngcontent-c5] {
+   margin-left: 2%;
+   float: right;
+    margin-top: 1%;
+   margin-right: 6%;
+   margin-bottom: -5%;
+}
+}
+.panel-body.tablepanel {
+overflow-y: scroll;
+height: 350px;   
+}
+
+.panel-primary[_ngcontent-c5] {
+   margin-bottom: -5%;
+}
+}
+.fa.fa-times{
+  font-size:15px;
+}

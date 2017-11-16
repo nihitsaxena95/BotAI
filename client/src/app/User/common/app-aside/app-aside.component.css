@@ -1,0 +1,15 @@
+.aside-menu {
+  background: #4A8BB9;
+  text-align:center;
+} 
+
+.video
+{
+   overflow-y: scroll; 
+   height: 90%; 
+   background: white;
+}
+
+.videoHeading{
+	color: white;
+}

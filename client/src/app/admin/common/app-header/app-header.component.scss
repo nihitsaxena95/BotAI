@@ -1,0 +1,44 @@
+.bg-dark {
+background-color: #375372 !important;
+}
+.unanswed{
+  font-family: 'Harmattan', sans-serif;
+
+}
+.navbar-brand {
+font-size: 33px;
+}
+.pull-right {
+margin-bottom:-0.1%;
+margin-right:5%;
+}
+
+p{
+color:#fff;
+font-size: 20px;	
+}
+
+
+
+a.links {
+ text-align:center;
+ color:white;
+ text-decoration:none;
+}
+a.links:hover {
+	color: white;
+}
+
+
+@media (min-width: 320px) and (max-width: 767px) {
+p{
+display:none !important;
+
+}
+
+.navbar-toggler {
+margin-left:55%;
+}
+
+}
+

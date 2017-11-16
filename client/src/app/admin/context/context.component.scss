@@ -1,0 +1,302 @@
+.btn {
+line-height:0.5;
+padding: 12px 12px;
+}
+.btn.btn-block {
+width:50%;
+padding:6px 1px;
+
+}
+.btn.btn-primary {
+color:white;     
+}
+.btn.btn-primary:hover {
+color:white;
+}
+a {
+text-decoration:none;
+}
+.card-header {
+background-color: #375372;
+color: white;
+padding: 10px 15px;
+}
+
+.main-collapsible-header {
+    background-color: #375372;
+    color: white;
+}
+
+
+.collapsible-header {
+    background-color: #7a99bc;
+    color: white;
+}
+
+
+@media (min-width: 300px) and (max-width: 1204px) {
+.d-md-down-none{
+display: inline !important;
+}
+}
+@media (max-width: 1204px) and (min-width: 300px){
+.btn[_ngcontent-c1] {
+font-size: 15px;
+}
+}
+@media (min-width:  300px) and (max-width: 1204px) {
+.card-group .card {
+-webkit-box-flex: 1;
+-ms-flex: 1 0 0%;
+flex: 1 0 0%;
+margin-bottom: 0;
+float: right;
+}
+}
+@media screen and (max-width: 360px) {
+.button-text {
+font-size:7px;
+}
+}
+.chat
+{
+list-style: none;
+margin: 0;
+padding: 0;
+}
+.chat li
+{
+margin-bottom: 10px;
+padding-bottom: 5px;
+border-bottom: 1px dotted #B3A9A9;
+}
+.chat li.left .chat-body
+{
+margin-left: 0px;
+}
+.chat li.right .chat-body
+{
+margin-right: 60px;
+}
+.chat li .chat-body p
+{
+margin: 0;
+color: #777777;
+}
+.panel .slidedown .glyphicon, .chat .glyphicon
+{
+margin-right: 5px;
+}
+.panel-body
+{
+overflow-y: scroll;
+height: 500px;   
+}
+.panel-body.tablepanel {
+overflow-y: scroll;
+height: 170px;   
+}
+::-webkit-scrollbar-track
+{
+-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+background-color: #F5F5F5;
+}
+::-webkit-scrollbar
+{
+width: 12px;
+background-color: #F5F5F5;
+}
+::-webkit-scrollbar-thumb
+{
+-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+background-color: #555;
+}
+.btn {
+line-height:0.5;
+}
+.addto {
+margin-left: 80%;
+margin-top: -5%;
+}
+.btn.btn-block {
+width:50%;
+padding:6px 1px;
+
+}
+.btn.btn-primary {
+color:white;
+font-size:18px;
+}
+.btn.btn-primary:hover {
+color:white;
+}
+.badge {
+padding:7px 15px;
+border-radius: 5px;
+margin-left: 1%;
+}
+a {
+text-decoration:none;
+}
+.badge.badge-pill {
+background-color:#375372;
+}
+.add {
+margin-top:2%;
+font-size: inherit;
+margin-left: 9%;
+background-color:#375372 ;
+border-color: #375372 ;
+}
+span{
+    font-size: 20px;
+}
+
+#btn-chat {
+color: #fff;
+background-color: #fa9040;
+padding: 10px 7px;
+font-size: initial;
+}
+@media (min-width: 300px) and (max-width: 1204px) {
+.d-md-down-none{
+display: inline !important;
+}
+}
+@media (min-width: 300px) and (max-width: 1204px) {
+.btn{
+font-size: 0.820rem;
+}
+}
+@media (min-width:  300px) and (max-width: 1204px) {
+.card-group .card {
+-webkit-box-flex: 1;
+-ms-flex: 1 0 0%;
+flex: 1 0 0%;
+margin-bottom: 0;
+float: right;
+}
+}
+@media screen and (max-width: 360px) {
+.button-text {
+font-size:7px;
+}
+}
+.badge {
+padding:7px 15px;
+}
+.badge.badge-pill {
+margin-top:1.5%;
+}
+.panel-primary.panel-heading {
+color: #fff;
+background-color: #375372;
+border-color: #375372;font-size: 23px;
+}
+.btn.btn-primary.pi-draggable.btn-block {
+color: #fff;
+background-color: #375372;
+border-color: #375372;
+}
+.addContextbtn{
+margin-top:2%;
+    padding-top: 12px;
+    padding-right: 12px;
+    padding-bottom: 12px;
+    padding-left: 12px;
+}
+.btn.btn-primary{
+background-color: #375372;
+border-color: #375372;
+}
+
+.btn.btn-md.btn-primary.dropdown-toggle{
+    font-size: 18px;
+border-color: #375372;
+}
+
+div.dropdown-menu.dropdownsubintent {
+position: inherit;
+float: inherit;
+/* top: 100%;
+left: 0;
+z-index: 1000;
+display: none;
+float: inherit;
+min-width: 160px;
+padding: 5px 0;
+margin: 2px 0 0;
+font-size: 20px;
+text-align: left;
+list-style: none;
+background-color: #fff;
+background-clip: padding-box;
+border: 1px solid #ccc;
+border: 1px solid rgba(0,0,0,.15);
+border-radius: 4px;
+box-shadow: 0 6px 12px rgba(0,0,0,.175);*/
+}
+
+.textarea {
+margin-top: 1%;
+}
+
+.dropdownbtn{
+margin-left:2%;
+}
+
+option {
+background: white;
+color:black;
+}
+
+select {
+color:white;
+border: 1px solid #111;
+width: 150px;
+padding: 5px 35px 5px 5px;
+font-size: 16px;
+border: 1px solid #375372;
+height: 34px;
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+/* background: url(http://www.stackoverflow.com/favicon.ico) 96% / 15% no-repeat #eee;*/
+}
+
+/* CAUTION: IE hackery ahead */
+select::-ms-expand { 
+display: none; /* remove default arrow on ie10 and ie11 */
+}
+
+/* target Internet Explorer 9 to undo the custom arrow */
+@media screen and (min-width:0\0) {
+select {
+background:none\9;
+padding: 5px\9;
+} 
+}
+
+ @media (min-width: 320px) and (max-width: 736px) {
+.btn.btn-primary[_ngcontent-c7] {
+    margin-left: 4%;
+}
+}
+
+.form-control{
+    font-size:18px;
+}
+
+.inputtext{
+  font-size:15px;}
+
+.form-control.description{
+      font-size:20px;
+}
+a.dropdown-item{
+ font-size:20px;
+}
+.addbtn {
+   float:inherit;
+   padding:12px 12px;
+}

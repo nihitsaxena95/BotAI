@@ -1,0 +1,305 @@
+
+<collapsible-list [type]="'accordion'" class="unanswed">
+<!-- <div> 
+  <div class="row unanswed"> -->
+  <collapsible-list-item>
+    <collapsible-header class="waves-effect main-collapsible-header">
+      Unanswered Questions
+    </collapsible-header>
+    <collapsible-body [expanded]="true" class="quetioncollapse">
+    <div class="col-md-4">
+      <div class="panel panel-primary">
+       <!--  <div class="panel-heading">
+          <span class="glyphicon glyphicon-comment"></span> {{Config.bottraining.PendingQuestions}}
+        </div> -->
+        <div class="panel-body">
+          <ul class="chat">
+            <li class="left clearfix">
+              <div class="chat-body clearfix">
+                <p *ngFor="let ques of arr ; let i=index ">
+                <a (click)="getQues(ques)"><b>{{i+1}}.</b> {{ques}}</a>
+                <a class="queDelete"><i (click)=deletePendingQuestions(ques) class="fa fa-times pull-right" aria-hidden="true"></i></a>
+              </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- =========Send Button======== -->
+        <div class="panel-footer">
+          <div class="input-group">
+            <input id="btn-input" type="text" class="form-control input-sm" placeholder="Type your message here..."  [(ngModel)]="newQuestion" name="question" (keyup.enter)="sendques(newQuestion)">
+            <span class="input-group-btn">
+              <button class="btn btn-lg btn-warning" id="btn-chat" (click)=sendques(newQuestion)>
+                {{Config.bottraining.Send}}</button>
+              </span>
+            </div>
+          
+      </div>
+      </div>
+      </div>
+      <!-- =========Send Button======== -->
+    <!-- ========================table======================= -->
+    <div class="col-md-7 displayQues">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          {{question}}
+        </div>
+        <div class="panel-body tablepanel">
+          <table id="c_table" class="table pi-draggable" draggable="true">
+            <thead>
+              <tr>
+                <th>{{Config.bottraining.Word}}</th>
+                <th>{{Config.bottraining.Type}}</th>
+                <th>{{Config.bottraining.Value}}</th>
+                <th><!-- {{Config.bottraining.Status}} --></th>
+              </tr>
+            </thead>
+            <tbody>
+             <tr *ngFor = " let data of tableData; let i=index ">
+              <td>{{data.word}}</td>
+              <td>{{data.type}}</td>
+              <td>{{data.typename}}</td>
+              <td *ngIf="data.type=='Not Found' " >
+                <a class="fa fa-plus-square pi-draggable btn-block addicon" id=" c_button" (click)="largeModal.show()"  draggable="true" (click)="call(data.word,data.type)"><!-- {{Config.bottraining.Add}} --></a>
+              </td>
+              <td *ngIf="data.type!= 'Not Found'"  class="greentick"> &#x2713;</td>
+              <td><a (click)="remove(i,data)"><i class="fa fa-trash-o icon" aria-hidden="true"></i></a></td>
+            </tr>
+            <tr>
+              <td>{{contextWord}}</td>
+              <td>{{context}}</td>
+              <td>{{contextValue}}</td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</collapsible-body>
+</collapsible-list-item>
+<!-- Intent here -->
+<collapsible-list-item>
+<collapsible-header class="waves-effect main-collapsible-header">
+<div class=row>
+ <div class="col-md-8">
+   <span class="secondtext">{{Config.bottraining.AddModify}}</span>
+ </div>
+ <div class="col-md-4 headingcircle">
+  <i class="fa fa-circle int" aria-hidden="true"></i>{{Config.bottraining.Intent}}
+  <i class="fa fa-circle subint" aria-hidden="true"></i>{{Config.bottraining.SubIntent}}
+</div>
+</div>
+</collapsible-header>
+<collapsible-body [expanded]="false">
+<div class = "row ">
+  <div class = "col-md-9 dropdownfirst">
+    <angular2-multiselect [data]="intentName" [(ngModel)]="selectedItemsIntent" 
+    [settings]="dropdownSettingsIntent" 
+    (onSelect)="onItemSelectIntent($event)" 
+    (onDeSelect)="OnItemDeSelectIntent($event)"
+    (onSelectAll)="onSelectAllIntent($event)"
+    (onDeSelectAll)="onDeSelectAllIntent($event)"></angular2-multiselect>
+  </div>
+  <div class = "col-md-3" *ngIf = "intentname">
+    <button type="button" class="btn btn-primary add deleteIntentbtn" (click)="deleteIntent(intentname)">Delete {{intentname.label}}</button>
+  </div>
+</div>
+<div class="existing " *ngIf="correspondSynonym.length>0">
+  <h4>{{Config.bottraining.ExistingSyn}} {{intentname.itemName}}</h4>
+  <span class="disp" *ngFor="let intent of correspondSynonym">
+    <span class="badge intbadge badge-pill text-white textint" *ngIf="intentname.label=='Intent'">
+      {{intent}}
+      <a><i class="fa fa-times cross" (click)="deletesynonym(intent)" aria-hidden="true"></i></a>
+    </span>
+
+    <span class="badge subintbadge badge-pill text-white textint" *ngIf="intentname.label=='SubIntent'">{{intent}}
+      <a>
+        <i class="fa fa-times" (click)="deletesynonym(intent)" aria-hidden="true"></i></a></span>
+      </span>            
+      <div class="row searchsyn">
+        <div class="col-md-8">
+          <input class="form-control addsynonyminput" name="name" placeholder="Add Synonyms" [(ngModel)]="adminSynonym" (keyup.enter)="addAdminSynonym()">
+        </div>
+        <div class="col-md-4">
+          <button type="button" class="btn btn-primary add addSynonym"  (click)="addAdminSynonym()">{{Config.bottraining.AddSyn}}</button>
+        </div>
+      </div>  
+    </div>
+    <div class="addIntent">
+      <button type="button" (click)="add.show()" class="btn btn-primary add addintentbtn" (click)="ifselected('Intent')" >{{Config.bottraining.AddInt}}</button>
+      <button type="button" (click)="add.show()" class="btn btn-primary add addintentbtn" (click)="ifselected('SubIntent')" >{{Config.bottraining.AddSubint}}</button> 
+    </div>
+  </collapsible-body>
+</collapsible-list-item>
+<!-- Intent ends here -->
+<!-- Context here -->
+<collapsible-list-item>
+<collapsible-header class="waves-effect main-collapsible-header">
+Context 
+</collapsible-header>
+<collapsible-body [expanded]="false">
+<app-context></app-context>
+</collapsible-body>
+</collapsible-list-item>
+<!-- Context ends here -->
+<!-- </div>
+</div> -->
+</collapsible-list>
+<!-- ========MOdal start for synonym of particular intent starts here ============-->
+<div bsModal #myModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <button type="button" class="close" (click)="myModal.hide()" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>       
+      <div class="modal-body">
+       <!-- ===============Add a synonym starts here  ===================-->
+       <input type="text" [(ngModel)]="adminSynonym" (keyup)="suggest()">
+       <button type="button" class="btn btn-primary float-left" (click)="addAdminSynonym()" >{{Config.bottraining.AddSyn}}</button>
+       <a class="btn">    
+         <span class="badge badge-pill text-white"*ngFor="let data of test" 
+         (click)="select(data)">{{data}}</span>
+       </a>
+       <!-- ===============Add a synonym  ends here ===================-->
+       <tabset class="tab-container">
+        <div class="tab-content">  
+          <tab heading="Synonym" ng-reflect-heading="Profile" id="Profile" class="tab-pane">                          
+            <div class="home-container">
+              <h3>{{Config.bottraining.ExistingSyno}}</h3>
+              <div class="existing" >  
+                <span class="badge badge-pill text-white" *ngFor="let syno of correspondSynonym" >{{syno}}
+                  <!-- ===============delete a particular  synonym  starts ===================-->
+                  <i class="fa fa-times" aria-hidden="true" (click)="deletesynonym(syno)"></i></span>
+                  <!-- ===============delete a particular  synonym ends here  ===================-->
+                </div>
+              </div>
+            </tab>        
+          </div>
+        </tabset>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="myModal.hide()">{{Config.bottraining.Close}}</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!-- ========MOdal ends for synonym of particular intent ends here ============-->
+<!-- 
+  <app-context></app-context> -->
+  <div bsModal #largeModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">{{Config.bottraining.Addnode}}</h4>
+          <button type="button" class="close" (click)="largeModal.hide()" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body modalone">
+          <tabset class="tab-container modalone">
+            <div class="tab-content modalone">     
+              <tab heading="Intent" ng-reflect-heading="Home" class="tab-pane modalone">
+                {{Config.bottraining.Add}} {{val}} {{Config.bottraining.SameAs}}
+                <div class="existing ">
+                  <angular2-multiselect [data]="intentName" [(ngModel)]="selectedItemsIntent" 
+                  [settings]="dropdownSettingsIntent" 
+                  (onSelect)="onItemSelectIntent($event)" 
+                  (onDeSelect)="OnItemDeSelectIntent($event)"
+                  (onSelectAll)="onSelectAllIntent($event)"
+                  (onDeSelectAll)="onDeSelectAllIntent($event)"></angular2-multiselect>
+                </div>
+                <button type="button" class="add text-white" (click) = "setSynonym(selectedItemsIntent);largeModal.hide()"> {{Config.bottraining.Add}}
+                </button>
+              </tab>
+              <tab heading="Context" ng-reflect-heading="Profile" id="Profile" class="tab-pane">
+               {{Config.bottraining.Add}} {{val}} {{Config.bottraining.SameAs}}
+               <div class="existing " >
+                <angular2-multiselect [data]="contextName" 
+                [(ngModel)]="selectedItemsContext" 
+                [settings]="dropdownSettingsContext" 
+                (onSelect)="onItemSelectContext($event)" 
+                (onDeSelect)="OnItemDeSelectContext($event)"
+                (onSelectAll)="onSelectAllContext($event)"
+                (onDeSelectAll)="onDeSelectAllContext($event)"></angular2-multiselect>
+                <button type="button" class="add text-white" (click) = "contextSynonym(selectedItemsContext);largeModal.hide()"> {{Config.bottraining.Add}}
+                </button>
+              </div>
+            </tab>
+          </div>
+        </tabset>
+      </div>
+      <div>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!-- =========================Modal 2=========================== -->
+<div bsModal #add="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+     <div class="modal-header">
+      <h4 class="modal-title">{{Config.bottraining.Add}} </h4>
+      <button type="button" class="close" (click)="add.hide()" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div> 
+    <div class="modal-body ">
+      <div class="headingbutton">    
+      </div>
+      <tabset class="tab-container modalone " *ngIf="value" >
+        <div class="tab-content modalone">     
+          <tab heading={{value}} ng-reflect-heading="Home" class="tab-pane modalone" id="Intent">
+            <form role="form" #addval="ngForm">
+              <div class="form-group">
+                <label for="exampleInputPassword1">{{Config.bottraining.Value}}</label>
+                <input type="text" class="form-control" id="meaning" name = "meaning"placeholder="Meaning" [(ngModel)]="addintent">
+              </div>
+              <div class="form-group">
+                <label for="exampleInput1">{{Config.bottraining.Priority}}</label>
+                <input type="text" class="form-control" id="priority" name = "priority" placeholder="priority" required [(ngModel)]="priority" pattern="[0-9]*" #mobile="ngModel">
+                <div [hidden]="mobile.valid || mobile.pristine" class="message" >
+                  <div [hidden]="!mobile.hasError('pattern')" style="color: red">{{Config.bottraining.SuggMsg}}</div>
+                </div>
+              </div>
+            </form>
+            <div>
+              <button type="button" class="btn btn-primary" (click)="add.hide()">{{Config.bottraining.Close}}</button>
+              <button type="button" class="btn btn-primary" [disabled]="!addval.form.valid" (click)="addIntent()"><span >{{Config.bottraining.Add}} {{value}}</span></button>
+            </div>
+          </tab>
+          <tab heading="Synonym" ng-reflect-heading="Profile" id="Profile" class="tab-pane">
+            <div class="home-container">
+              <div>
+                <h5><b>{{Config.bottraining.AddSyno}}</b> {{addintent}}</h5>
+                <input type="text" class="form-control" id="synonym" name = "synonym" placeholder="Enter Synonyms" [(ngModel)]="temp" (keyup)="suggest()" (keyup.enter)="select(temp)">
+              </div>
+              <div class="existing">
+                <h5><b>{{Config.bottraining.AddedSyn}}</b></h5>
+                <a class="btn badgebtn" *ngFor="let data1 of main"> 
+                  <span class="badge badge-pill text-white">
+                    {{data1}}
+                  </span>
+                </a>
+              </div>
+              <div class="existing">
+                <h5><b>{{Config.bottraining.Synonyms}}</b></h5>
+                <a class="btn suggestsynonym" *ngFor="let data of synres"> 
+                  <span class="badge badge-pill text-white " (click)="select(data)">               
+                    {{data}}
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div>
+              <button type="button" class="btn btn-primary" (click)="add.hide()">{{Config.bottraining.Close}}</button>
+              <button *ngIf ="addintent" type="button" class="btn btn-primary"><span (click)="add.hide()" (click)="addSynonym()">{{Config.bottraining.AddSyn}}</span></button>
+            </div>
+          </tab>
+        </div>
+      </tabset>
+    </div>
+  </div> <!-- /.modal-content -->
+</div> <!-- /.modal-dialog -->
+</div> <!-- /.modal -->

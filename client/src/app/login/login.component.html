@@ -1,0 +1,67 @@
+<div class="app flex-row align-items-center">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card-group fullcard">
+          <div class="card p-4">
+            <div class="card-body">
+              <h1>{{message.loginHeading}}</h1>
+              <p class="text-muted">{{message.signInMsg}}</p>
+              <div class="input-group mb-3">
+                <span class="input-group-addon"><i class="icon-user"></i></span>
+                <input type="text" class="form-control" placeholder="Username" required  [(ngModel)]="loginDetails.email" name="email" >
+              </div>
+              <div class="input-group mb-4">
+                <span class="input-group-addon"><i class="icon-lock"></i></span>
+                <input type="password" class="form-control" placeholder="Password" required
+             [(ngModel)]="loginDetails.password" >
+              </div>
+              <div class="row">
+                <div class="col-6">
+                  <button type="button" class="btn btn-primary px-4" (click)=loginUser()>{{message.loginbtn}}</button>
+                </div>
+                <div class="col-6 text-right">
+
+                  <button type="button" class="btn btn-link px-0" [routerLink]="['/forgotpassword']">{{message.forgotpassword}}</button>
+                </div>
+              </div>
+              <div class="login-or">
+               <hr class="hr-or">
+               <span class="span-or">{{message.or}}</span>
+             </div>
+             <div class="row">
+              <!-- link for Facebook -->
+              <div class="col-sm-12 col-md-12 col-lg-6">
+               <a id="fb" href="{{fbUrl}}" class="btn btn-block btn-fb" type="button">  <i class="fa fa-facebook"></i>&nbsp;<span id="btnfb">{{message.socialFb}}</span></a>
+             </div><br><br>
+             <!-- link for google-->
+             <div class="col-sm-12 col-md-12 col-lg-6">
+               <a id="google" href="{{googleUrl}}" class="btn btn-block btn-google" type="button"><i class="fa fa-google-plus"></i>&nbsp;<span id="btngoogle">{{message.socialGoogle}}</span></a>
+             </div>
+
+           </div>
+            </div>
+          </div>
+          <div class="card text-white bg-primary py-5 d-md-down-none">
+            <div class="card-body text-center">
+              <div>
+                <h2>{{message.newuser}}</h2>
+                <h5>{{message.createAccount}}</h5>
+                <button type="button" class="btn btn-primary btn-md px-4 active mt-3" (click)=register()>{{message.signup}}</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div  *ngIf="alert==1" class="alert alert-danger" role="alert">
+         <strong>{{Config.login.alert}}</strong> {{Config.login.deactivate}}
+       </div>
+       <div  *ngIf="alert==2" class="alert alert-danger" role="alert">
+         <strong>{{Config.login.alert}}</strong>{{Config.login.incorrectcredentials}} 
+       </div>
+       <div  *ngIf="alert==3" class="alert alert-danger" role="alert">
+         <strong>{{Config.login.alert}}</strong> {{Config.login.empty}}
+       </div>
+      </div>
+    </div>
+  </div>
+</div>

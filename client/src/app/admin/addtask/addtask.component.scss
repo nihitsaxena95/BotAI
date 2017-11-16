@@ -1,0 +1,23 @@
+.main{
+margin-top:4%;
+}
+.btn {
+line-height:1;
+margin-bottom:2%;
+padding: 3px 6px;
+}
+.btn.btn-block {
+width:100%;  
+}
+.dropdown-item {
+padding: 3px 10px;
+}
+select.form-control:not([size]):not([multiple]) {
+height: calc(3.3rem + 0px);
+}
+.btn.btn-primary {
+background-color: #375372;
+}
+#top{
+margin-top: 30px;
+}

@@ -1,0 +1,422 @@
+.chat
+{
+list-style: none;
+margin: 0;
+padding: 0;
+}
+/*.panel-primary{
+height: 60%;
+}*/
+div {
+    font-size : 17px;
+}
+.panel-heading{
+background-color: #375372;
+}
+
+
+.form-group label {
+    font-size :20px;
+}
+
+div.message.you-message {
+    font-size: 20px;
+}
+
+.chat li
+{
+margin-bottom: 10px;
+padding-bottom: 5px;
+border-bottom: 1px dotted #B3A9A9;
+}
+
+.nm h3{
+    font-size : 28px;
+}
+.modal-title {
+     font-size: 20px;
+     font-weight: 600;
+}
+
+.modal {
+    font-size: 20px;
+}
+
+.select_join {
+    font-size: 20px;
+}
+
+.modal {
+    font-size : 20px;
+}
+.btt {
+margin-top: 30px;
+height: 30px;
+width: 70px;
+font-size: 17px;
+padding: 5px;
+margin : 1px;
+color: white;
+background-color: #375372;
+}
+
+textarea {
+    font-size: 17px;
+}
+
+.col-sm-12 {
+    font-size : 17px;
+}
+
+.chat-body div {
+    font-size: 20px;
+}
+
+.panel-heading {
+    font-size: 20px;
+}
+
+div.dropdown-menu.dropdownsubintent {
+    position: inherit;
+    float: inherit;
+    font-size: 17px;
+   /* top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: inherit;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 4px;
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);*/
+}
+
+
+.btt1{
+margin-top: 30px;
+height: 30px;
+width: 150px;
+font-size: 20px;
+padding: 5px;
+margin : 1px;
+color: white;
+background-color: #375372;
+}
+.chat li.left .chat-body
+{
+margin-left: 0px;
+}
+.chat li.right .chat-body
+{
+margin-right: 60px;
+}
+.setflow b{
+color : blue;
+cursor : pointer;
+}
+table {
+    font-size: 18px;
+border-collapse: collapse;
+}
+table, th, td {
+    font-size: 18px;
+border: 1px solid black;
+}
+.chat li .chat-body p
+{
+margin: 0;
+color: #777777;
+}
+.panel .slidedown .glyphicon, .chat .glyphicon
+{
+margin-right: 5px;
+}
+.panel-body
+{
+overflow-y: scroll;
+height: 550px;   
+}
+ .card-block {
+    height: 420px;
+ }
+::-webkit-scrollbar-track
+{
+-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+background-color: #F5F5F5;
+}
+::-webkit-scrollbar
+{
+width: 12px;
+background-color: #F5F5F5;
+}
+::-webkit-scrollbar-thumb
+{
+-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+background-color: #555;
+}
+.btn {
+line-height:0.5;
+}
+.btn.btn-block {
+width:100%;
+padding:6px 1px;
+
+}
+.btn.btn-primary {
+color:white;
+}
+.btn.btn-primary:hover {
+color:white;
+}
+@media (min-width: 300px) and (max-width: 1204px) {
+.d-md-down-none{
+display: inline !important;
+}
+}
+@media (min-width: 300px) and (max-width: 1204px) {
+.btn{
+font-size: 0.820rem;
+}
+}
+@media (min-width:  300px) and (max-width: 1204px) {
+.card-group .card {
+-webkit-box-flex: 1;
+-ms-flex: 1 0 0%;
+flex: 1 0 0%;
+margin-bottom: 0;
+float: right;
+}
+}
+@media screen and (max-width: 360px) {
+.button-text {
+font-size:7px;
+}
+}
+/*Chat CSS*/
+*, *:before, *:after {
+box-sizing: border-box;
+}
+.card1{
+height: 460px;
+}
+.card1 h3 strong {
+    font-size: 20px;
+}
+.message-data {
+margin-bottom: 15px;
+}
+.message-data-time {
+color: #a8aab1;
+padding-left: 6px;
+}
+.message {
+color: white;
+padding: 18px 20px;
+line-height: 26px;
+font-size: 16px;
+border-radius: 5px;
+width: 90%;
+position: relative;
+}
+.message:after {
+content: "";
+position: absolute;
+top: -15px;
+left: 20px;
+border-width: 0 15px 15px;
+border-style: solid;
+border-color: #4A8BB9 transparent;
+display: block;
+width: 0;
+}
+.you-message {
+background: #4A8BB9 ;
+color:white;
+border-radius: 20px;
+}
+.me-message {
+background: #67B6EF;
+border-radius: 20px;
+color:white;
+}
+.me-message:after {
+border-color: #67B6EF transparent;
+right: 20px;
+top: -15px;
+left: auto;
+bottom:auto;
+}
+.chat .chat-message .chat .chat-message {
+font-size: 20px;
+color: gray;
+cursor: pointer;
+}
+.chat-ul li{
+list-style-type: none;
+}
+.align-left {
+text-align: left;
+}
+.align-right {
+text-align: right;
+}
+.float-right {
+float: right;
+}
+.h4{
+text-align: center;
+}
+.clearfix:after {
+visibility: hidden;
+display: block;
+font-size: 0;
+content: " ";
+clear: both;
+height: 0;
+}
+.you {
+color: #4A8BB9;
+size: 50%;
+}
+.me {
+color: #CCDBDC;
+}
+h1, h2, h3, h4, h5, h6 {
+font-size:18px;
+color: #003366;
+}
+.card-footer{
+padding: 0 0;
+position:relative;
+}
+.btn {
+background:#283e4a;
+border-color: #283e4a;
+font-weight : 700;
+font-size : 20px;
+color:white;
+text-align: center;
+}
+.card{
+height:650px;
+}
+.card-block{
+overflow-y:hidden;
+overflow-x:hidden; 
+/*-webkit-overflow-scrolling:touch;*/
+}
+img {
+width:50%;
+height:50%;
+}
+.gap {
+margin-top:7px;
+margin-bottom : 10px;
+}
+.fa-clock-o{
+color: #fffdfd;
+}
+.button.max {
+background-color: #a3d063 ;
+}
+mat-sidenav-container{
+width: 100%;
+}
+.example-sidenav-content {
+
+height: 100%;
+align-items: center;
+justify-content: center;
+}
+mat-sidenav {
+width: 450px;
+background: #123;
+text-align:center;
+}
+.videoHeading{
+color:white;
+}
+.attachment_ts {
+color: #717274 ;
+font-size: 12px;
+line-height: 14px;
+padding-top: .25rem;
+}
+.attachment_source {
+display: inline-block;
+}
+.attachment_source_name {
+height:20px;
+color: #717274 !important;
+font-size: 15px;
+font-weight: 400;
+line-height: 22px;
+}
+.attachment_source_icon {
+width: 10%;
+height: 15px;
+}
+#btn-input{
+height: 29px;
+}
+/*Instruction*/
+.card-outline-primary {
+border:1px solid #000;
+height:510px;
+}
+.card-head{
+background:#a89696; 
+}
+.tcontent{
+font-size:13px;
+}
+.ticket{
+text-align:center;
+color:#fff;
+font-weight : 900;
+padding-top : 10px;
+background-color: #426578 ;
+}
+.cardcolor {
+box-shadow: 2px 2px 4px #7e8b92 ;
+}
+p.oblique {
+/*font-style: oblique;*/
+font-size: 17px;
+}
+
+.questionicon{
+    font-size:20px;
+    float:right;
+}
+a{
+    cursor:pointer;
+}
+i{
+    margin-left:45px;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+div.panel.panel-primary.addquestionbox{
+     width: 200px;
+}
+.testflow{
+   margin-left:10%
+}
+.panel-body[_ngcontent-c5] {
+   height: 400px;
+}
+.savebtn{
+   width:110px;
+}
+.addbtn{
+   width:50px;
+}
+}
